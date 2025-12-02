@@ -19,7 +19,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> oneColor = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(oneColor);
+		Set<Cube> cubeSet = CubeSolver_Skeleton.getDistinctSolidCubes(oneColor);
 		
 		assertEquals(1, cubeSet.size());
 	}

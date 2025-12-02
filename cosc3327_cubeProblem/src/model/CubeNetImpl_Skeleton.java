@@ -6,20 +6,29 @@ import java.util.Map;
 
 public class CubeNetImpl_Skeleton implements CubeNet
 {	
+	private final Map<Face, Color> faceToColor;
+
+	
 	public CubeNetImpl_Skeleton(Color top, Color front, Color left, Color right, Color bottom, Color back)
 	{
-		throw new RuntimeException("NOT IMPLEMENTED!");
+		faceToColor = new HashMap<>();
+		faceToColor.put(Face.TOP, top);
+		faceToColor.put(Face.LEFT, left);
+		faceToColor.put(Face.FRONT, front);
+		faceToColor.put(Face.RIGHT, right);
+		faceToColor.put(Face.BOTTOM, bottom);
+		faceToColor.put(Face.BACK, back);
 	}
 	
 	public CubeNetImpl_Skeleton(Map<Face, Color> faceToColorMap)
 	{
-		throw new RuntimeException("NOT IMPLEMENTED!");
+		faceToColor = faceToColorMap;
 	}
 	
 	@Override
 	public Color getColor(Face face)
 	{
-		throw new RuntimeException("NOT IMPLEMENTED!");
+		return faceToColor.get(face);
 	}
 
 	//Improving on the inherited hashCode() is mandatory
