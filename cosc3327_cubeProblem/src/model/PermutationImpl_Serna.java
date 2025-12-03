@@ -1,4 +1,4 @@
-package combinatorics;
+package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class PermutationImpl_Serna<E> implements Permutation_Kart<E> {
+public class PermutationImpl_Serna<E> implements Permutation<E> {
 	private final Map<E,E> imageMap;
     private final Map<E,E> preImageMap;
     private final Set<E> domain;
@@ -201,12 +201,12 @@ public class PermutationImpl_Serna<E> implements Permutation_Kart<E> {
 	    if (this == obj) {
 	        // same reference — stays true
 	    	
-	    } else if (!(obj instanceof Permutation_Kart)) {
+	    } else if (!(obj instanceof Permutation)) {
 	        equalsVerdict = false;
 	        
 	    } else {
 	    	//casting obj to ours to check similarirty
-	        Permutation_Kart<E> other = (Permutation_Kart<E>) obj;
+	        Permutation<E> other = (Permutation<E>) obj;
 
 	        if (!this.domain.equals(other.getDomain())) {
 	            equalsVerdict = false;

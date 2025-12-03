@@ -1,8 +1,8 @@
-package combinatorics;
+package model;
 
 import java.util.Set;
 
-public interface Permutation_Kart<E>
+public interface Permutation<E>
 {
 	/**
 	 * @author kart

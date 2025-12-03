@@ -1,4 +1,4 @@
-package combinatorics;
+package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class PermutationUtils_Serna {
 	
-	public static <E> List<E> getCycle(Permutation_Kart<E> permutation, E e) {
+	public static <E> List<E> getCycle(Permutation<E> permutation, E e) {
 		/**
 	     * Given a permutation and a starting element e, return the full cycle containing e.
 	     *
@@ -36,7 +36,7 @@ public class PermutationUtils_Serna {
 	    return theCycle;
     }
 
-    public static <E> Permutation_Kart<E> getInverse(Permutation_Kart<E> permutation) {
+    public static <E> Permutation<E> getInverse(Permutation<E> permutation) {
     	/**
          * Return a new permutation that is the inverse of the given permutation.
          *
@@ -74,7 +74,7 @@ public class PermutationUtils_Serna {
     	return inversePermutation;
 	}
 
-    public static <E> Permutation_Kart<E> compose(Permutation_Kart<E> permutation1, Permutation_Kart<E> permutation2) {
+    public static <E> Permutation<E> compose(Permutation<E> permutation1, Permutation<E> permutation2) {
     	/**
          * Compose two permutations: permutation1 ∘ permutation2.
          * That is, (permutation1 after permutation2): for all e,
@@ -119,7 +119,7 @@ public class PermutationUtils_Serna {
         return new PermutationImpl_Serna<>(newCycles);  
     }
 
-    public static <E> boolean isCyclic(Permutation_Kart<E> permutation) {
+    public static <E> boolean isCyclic(Permutation<E> permutation) {
     	/**
          * Determine if the given permutation consists of a single cycle (i.e., is cyclic).
          *
