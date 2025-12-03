@@ -16,7 +16,7 @@ import java.util.Set;
 import org.junit.Test;
 
 import model.Cube;
-import model.CubeImpl_Skeleton;
+import model.CubeImpl_Serna;
 import model.CubeNet;
 import model.CubeNetImpl_Serna;
 import model.Face;
@@ -38,7 +38,7 @@ public class CubeTests
 		CubeNet cubeNet = new CubeNetImpl_Serna(faceToColorMap);
 		System.out.println("cubeNet = \n" + cubeNet);
 		
-		Cube cube = new CubeImpl_Skeleton(cubeNet);
+		Cube cube = new CubeImpl_Serna(cubeNet);
 		
 		Set<CubeNet> cubeNetSet = cube.getAllPossibleCubeNets();
 		
