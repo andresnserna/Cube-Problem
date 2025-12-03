@@ -4,9 +4,9 @@ import java.awt.Color;
 import java.util.Set;
 
 import static java.awt.Color.*;
-import static model.UnicodeUtils_Kart.*;
+import static model.UnicodeUtils.*;
 
-public interface ColorRenderer_Kart
+public interface ColorRenderer
 {
 	/**
 	 * @author kart

@@ -2,10 +2,10 @@ package model;
 
 import java.awt.Color;
 import java.util.Set;
-import static model.UnicodeUtils_Kart.*;
+import static model.UnicodeUtils.*;
 
 
-public enum ColorRendererImpl_Serna implements ColorRenderer_Kart
+public enum ColorRendererImpl_Serna implements ColorRenderer
 {
 	UNICODE_SQUARE_RENDERER;
 	

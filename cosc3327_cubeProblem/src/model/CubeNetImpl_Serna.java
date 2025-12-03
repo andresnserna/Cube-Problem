@@ -4,12 +4,12 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CubeNetImpl_Skeleton implements CubeNet
+public class CubeNetImpl_Serna implements CubeNet
 {	
 	private final Map<Face, Color> faceToColor;
 
 	
-	public CubeNetImpl_Skeleton(Color top, Color front, Color left, Color right, Color bottom, Color back)
+	public CubeNetImpl_Serna(Color top, Color front, Color left, Color right, Color bottom, Color back)
 	{
 		faceToColor = new HashMap<>();
 		faceToColor.put(Face.TOP, top);
@@ -20,7 +20,7 @@ public class CubeNetImpl_Skeleton implements CubeNet
 		faceToColor.put(Face.BACK, back);
 	}
 	
-	public CubeNetImpl_Skeleton(Map<Face, Color> faceToColorMap)
+	public CubeNetImpl_Serna(Map<Face, Color> faceToColorMap)
 	{
 		faceToColor = faceToColorMap;
 	}
@@ -38,13 +38,16 @@ public class CubeNetImpl_Skeleton implements CubeNet
 	//contract" is satisfied
 	public int hashCode()
 	{
+		
 		int result = 13; //taylor's favorite number
-		result = 27 * result + colorCode(faceToColor.get(Face.TOP));
-	    result = 27 * result + colorCode(faceToColor.get(Face.LEFT));
-	    result = 27 * result + colorCode(faceToColor.get(Face.FRONT));
-	    result = 27 * result + colorCode(faceToColor.get(Face.RIGHT));
-	    result = 27 * result + colorCode(faceToColor.get(Face.BOTTOM));
-	    result = 27 * result + colorCode(faceToColor.get(Face.BACK));
+		int offset = 27; //my favorite number
+		
+		result = offset * result + colorCode(faceToColor.get(Face.TOP));
+	    result = offset * result + colorCode(faceToColor.get(Face.LEFT));
+	    result = offset * result + colorCode(faceToColor.get(Face.FRONT));
+	    result = offset * result + colorCode(faceToColor.get(Face.RIGHT));
+	    result = offset * result + colorCode(faceToColor.get(Face.BOTTOM));
+	    result = offset * result + colorCode(faceToColor.get(Face.BACK));
 	    
 	    return result;
 	}

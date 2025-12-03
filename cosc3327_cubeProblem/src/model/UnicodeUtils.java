@@ -1,6 +1,6 @@
 package model;
 
-public class UnicodeUtils_Kart
+public class UnicodeUtils
 {
 	/**
 	 * @author kart
@@ -19,7 +19,7 @@ public class UnicodeUtils_Kart
 	public static final String NO_ENTRY = "\uD83D\uDEC7";
 	public static final String OPTICAL_DISK = "\uD83D\uDCBF";
 	
-	private UnicodeUtils_Kart()
+	private UnicodeUtils()
 	{
 		throw new RuntimeException("DO NOT INSTANTIATE!");
 	}

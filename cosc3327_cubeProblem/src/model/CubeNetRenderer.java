@@ -3,7 +3,7 @@ package model;
 import java.awt.Color;
 import java.util.Set;
 
-public interface CubeNetRenderer_Kart
+public interface CubeNetRenderer
 {
 	/**
 	 * @author kart

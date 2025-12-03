@@ -18,7 +18,7 @@ import org.junit.Test;
 import model.Cube;
 import model.CubeImpl_Skeleton;
 import model.CubeNet;
-import model.CubeNetImpl_Skeleton;
+import model.CubeNetImpl_Serna;
 import model.Face;
 
 public class CubeTests
@@ -35,7 +35,7 @@ public class CubeTests
 		faceToColorMap.put(BACK, Color.ORANGE);
 		faceToColorMap.put(BOTTOM, Color.WHITE);
 		
-		CubeNet cubeNet = new CubeNetImpl_Skeleton(faceToColorMap);
+		CubeNet cubeNet = new CubeNetImpl_Serna(faceToColorMap);
 		System.out.println("cubeNet = \n" + cubeNet);
 		
 		Cube cube = new CubeImpl_Skeleton(cubeNet);
@@ -50,7 +50,7 @@ public class CubeTests
 		faceToColorMapRotation.put(BACK, Color.RED);
 		faceToColorMapRotation.put(BOTTOM, Color.WHITE);
 		
-		CubeNet cubeNetOtherRepresentative = new CubeNetImpl_Skeleton(faceToColorMapRotation);
+		CubeNet cubeNetOtherRepresentative = new CubeNetImpl_Serna(faceToColorMapRotation);
 		System.out.println("cubeNetOtherRepresentative = \n" + cubeNetOtherRepresentative);
 		
 		assertTrue("cubeNetSet = " + cubeNetSet + "\n" + cubeNetOtherRepresentative + "\n", cubeNetSet.contains(cubeNetOtherRepresentative));

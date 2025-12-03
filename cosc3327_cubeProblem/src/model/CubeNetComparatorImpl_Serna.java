@@ -62,7 +62,7 @@ public enum CubeNetComparatorImpl_Serna implements Comparator<CubeNet>
 	    return rgbIntArray;
 	}
 	
-	private static String getRendering(Color[] colors, ColorRenderer_Kart renderer)
+	private static String getRendering(Color[] colors, ColorRenderer renderer)
 	{
 		//part of post: rv will look something like this:
 		//🟥🟦🟩🟧🟨⬛

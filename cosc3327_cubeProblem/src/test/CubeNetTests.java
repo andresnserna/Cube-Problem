@@ -15,7 +15,7 @@ import java.util.Map;
 import org.junit.Test;
 
 import model.CubeNet;
-import model.CubeNetImpl_Skeleton;
+import model.CubeNetImpl_Serna;
 import model.Face;
 
 public class CubeNetTests extends CubeTests
@@ -31,7 +31,7 @@ public class CubeNetTests extends CubeTests
 		faceToColorMap.put(BACK, Color.YELLOW);
 		faceToColorMap.put(BOTTOM, Color.MAGENTA);
 		
-		CubeNet cubeNet = new CubeNetImpl_Skeleton(faceToColorMap);
+		CubeNet cubeNet = new CubeNetImpl_Serna(faceToColorMap);
 		assertEquals(cubeNet.getTop(), Color.RED);
 		assertEquals(cubeNet.getFront(), Color.BLUE);
 		assertEquals(cubeNet.getLeft(), Color.GREEN);

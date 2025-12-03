@@ -3,10 +3,10 @@ package model;
 import java.awt.Color;
 import java.util.Set;
 
-public enum CubeNetRendererImpl_Serna implements CubeNetRenderer_Kart
+public enum CubeNetRendererImpl_Serna implements CubeNetRenderer
 {
 	CUBENET_UNICODE_SQUARE_RENDERER;
-	private final ColorRenderer_Kart myRenderer = ColorRendererImpl_Serna.UNICODE_SQUARE_RENDERER;
+	private final ColorRenderer myRenderer = ColorRendererImpl_Serna.UNICODE_SQUARE_RENDERER;
 	
 	public Set<Color> getSupportedColors()
 	{
@@ -42,7 +42,7 @@ public enum CubeNetRendererImpl_Serna implements CubeNetRenderer_Kart
 		String right = myRenderer.getSupportedColors().contains(cubeNet.getColor(Face.RIGHT)) ? myRenderer.getRendering(cubeNet.getColor(Face.RIGHT)) : "?";
 		String bottom = myRenderer.getSupportedColors().contains(cubeNet.getColor(Face.BOTTOM)) ? myRenderer.getRendering(cubeNet.getColor(Face.BOTTOM)) : "?";
 		String back = myRenderer.getSupportedColors().contains(cubeNet.getColor(Face.BACK)) ? myRenderer.getRendering(cubeNet.getColor(Face.BACK)) : "?";
-		String disk = UnicodeUtils_Kart.OPTICAL_DISK;
+		String disk = UnicodeUtils.OPTICAL_DISK;
 
 		StringBuilder sb = new StringBuilder();
 		sb.append(disk + top + disk + "\n");
