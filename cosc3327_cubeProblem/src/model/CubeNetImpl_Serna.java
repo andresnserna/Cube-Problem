@@ -103,4 +103,28 @@ public class CubeNetImpl_Serna implements CubeNet
 	    if (color.equals(Color.WHITE)) return 7;
 	    return 0; // fallback for unsupported colors
 	}
+	
+	public Color getTop() {
+	    return faceToColor.get(Face.TOP);
+	}
+
+	public Color getFront() {
+	    return faceToColor.get(Face.FRONT);
+	}
+
+	public Color getRight() {
+	    return faceToColor.get(Face.RIGHT);
+	}
+
+	public Color getBack() {
+	    return faceToColor.get(Face.BACK);
+	}
+
+	public Color getLeft() {
+	    return faceToColor.get(Face.LEFT);
+	}
+
+	public Color getBottom() {
+	    return faceToColor.get(Face.BOTTOM);
+	}
 }

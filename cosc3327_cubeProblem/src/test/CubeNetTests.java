@@ -31,7 +31,7 @@ public class CubeNetTests extends CubeTests
 		faceToColorMap.put(BACK, Color.YELLOW);
 		faceToColorMap.put(BOTTOM, Color.MAGENTA);
 		
-		CubeNet cubeNet = new CubeNetImpl_Serna(faceToColorMap);
+	    CubeNetImpl_Serna cubeNet = new CubeNetImpl_Serna(faceToColorMap);
 		assertEquals(cubeNet.getTop(), Color.RED);
 		assertEquals(cubeNet.getFront(), Color.BLUE);
 		assertEquals(cubeNet.getLeft(), Color.GREEN);

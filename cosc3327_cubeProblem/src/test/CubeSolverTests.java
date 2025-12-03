@@ -10,7 +10,7 @@ import java.util.Set;
 import org.junit.Test;
 
 import model.Cube;
-import model.CubeSolverImpl_Skeleton;
+import model.CubeSolverImpl_Serna;
 
 public class CubeSolverTests extends CubeTests
 {
@@ -19,7 +19,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> oneColor = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED}));
 		
-		Set<Cube> cubeSet = CubeSolver_Skeleton.getDistinctSolidCubes(oneColor);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(oneColor);
 		
 		assertEquals(1, cubeSet.size());
 	}
@@ -29,7 +29,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> oneColor = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(oneColor);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(oneColor);
 		
 		assertEquals(1, cubeSet.size());
 	}
@@ -39,7 +39,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> twoColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(twoColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(twoColors);
 		assertEquals(10, cubeSet.size());
 	}
 
@@ -48,7 +48,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> twoColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(twoColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(twoColors);
 		assertEquals(10, cubeSet.size());
 	}
 	
@@ -57,7 +57,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> threeColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(threeColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(threeColors);
 		assertEquals(57, cubeSet.size());
 	}
 	
@@ -66,7 +66,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> threeColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(threeColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(threeColors);
 		assertEquals(57, cubeSet.size());
 	}
 	
@@ -75,7 +75,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> fourColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(fourColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(fourColors);
 		assertEquals(240, cubeSet.size());
 	}
 	
@@ -84,7 +84,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> fourColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(fourColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(fourColors);
 		assertEquals(240, cubeSet.size());
 	}
 	
@@ -93,7 +93,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> fiveColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN, Color.YELLOW}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(fiveColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(fiveColors);
 		assertEquals(800, cubeSet.size());
 	}
 	
@@ -102,7 +102,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> fiveColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN, Color.YELLOW}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(fiveColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(fiveColors);
 		assertEquals(800, cubeSet.size());
 	}
 
@@ -111,7 +111,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> sixColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN, Color.YELLOW, Color.MAGENTA}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(sixColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(sixColors);
 		assertEquals(2226, cubeSet.size());
 	}
 
@@ -120,7 +120,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> sixColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN, Color.YELLOW, Color.MAGENTA}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(sixColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(sixColors);
 		assertEquals(2226, cubeSet.size());
 	}
 
@@ -129,7 +129,7 @@ public class CubeSolverTests extends CubeTests
 	{
 		Set<Color> sevenColors = new HashSet<Color>(Arrays.asList(new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.CYAN, Color.YELLOW, Color.MAGENTA, Color.WHITE}));
 		
-		Set<Cube> cubeSet = CubeSolverImpl_Skeleton.getDistinctSolidCubes(sevenColors);
+		Set<Cube> cubeSet = CubeSolverImpl_Serna.getDistinctSolidCubes(sevenColors);
 		assertEquals(5390, cubeSet.size());
 	}
 }
