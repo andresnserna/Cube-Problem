@@ -16,6 +16,8 @@ public class PermutationImpl_Serna<E> implements Permutation<E> {
 	public PermutationImpl_Serna(Set<List<E>> cycles, Set<E> domain) {
 		// 0. null and empty check
 		// Assert that cycles set does not contain null
+		System.out.println("PermutationImpl_Serna(cycles, domain) CALLED");
+		
 		assert !cycles.contains(null) 
 		    : "Cycles set cannot contain null";
 
@@ -76,6 +78,8 @@ public class PermutationImpl_Serna<E> implements Permutation<E> {
 	public PermutationImpl_Serna(Set<List<E>> cycles) {
 		// 0. null and empty check
 		// Assert that cycles set does not contain null
+		System.out.println("PermutationImpl_Serna(cycles) CALLED");
+		
 		assert !cycles.contains(null) 
 		    : "Cycles set cannot contain null";
 
@@ -129,6 +133,8 @@ public class PermutationImpl_Serna<E> implements Permutation<E> {
                 preImageMap.put(e, e);   // preimage is itself
             }
         }
+        
+		System.out.println("PermutationImpl_Serna(cycles) END");
 	}
 
 	@Override
