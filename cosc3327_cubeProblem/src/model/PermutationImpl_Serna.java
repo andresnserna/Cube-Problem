@@ -133,7 +133,7 @@ public class PermutationImpl_Serna<E> implements Permutation<E> {
                 preImageMap.put(e, e);   // preimage is itself
             }
         }
-        
+        //this breakpoint never triggered when calling the 24 rotations?
 		System.out.println("PermutationImpl_Serna(cycles) END");
 	}
 
@@ -141,7 +141,7 @@ public class PermutationImpl_Serna<E> implements Permutation<E> {
 	public E getImage(E e) {
 //		Pre: domain.contains(e)
 //		Post: Returns the element that 'e' maps to under this permutation.
-		assert domain.contains(e);
+		assert domain.contains(e) : "Domain: " + domain + "doesn't contain element e: " + e;
 	    return imageMap.get(e);
 	}
 
