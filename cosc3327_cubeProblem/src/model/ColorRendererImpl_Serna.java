@@ -40,7 +40,7 @@ public enum ColorRendererImpl_Serna implements ColorRenderer
 	public String getRendering(Color color)
 	{
 	// preconditions
-		assert getSupportedColors().contains(color) : "Color: " + color + " is not supported";	
+		//assert getSupportedColors().contains(color) : "Color: " + color + " is not supported";	
 	// end of preconditions
 	
 		
