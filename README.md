@@ -38,7 +38,7 @@ The solver leverages mathematical concepts like permutations, cycle notation, an
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/tests_passed.png" width="600">
+  <img src="cosc3327_cubeProblem/screenshots/tests_passed.png" width="600">
 </p>
 
 
