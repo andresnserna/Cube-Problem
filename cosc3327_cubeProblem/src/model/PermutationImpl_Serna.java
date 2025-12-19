@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import combinatorics.PermutationUtils_Serna;
+
 public class PermutationImpl_Serna<E> implements Permutation<E> {
 	private final Map<E,E> imageMap;
     private final Map<E,E> preImageMap;
@@ -72,6 +74,65 @@ public class PermutationImpl_Serna<E> implements Permutation<E> {
             }
         }
         
+	}
+	
+
+	public PermutationImpl_Serna(Set<List<E>> cycles) {
+		// 0. null and empty check
+		// Assert that cycles set does not contain null
+		assert !cycles.contains(null) 
+		    : "Cycles set cannot contain null";
+
+		// Assert that no cycle is empty
+		for (List<E> cycle : cycles) {
+		    assert cycle != null && !cycle.isEmpty() 
+		        : "No cycle can be empty";
+		}
+		
+		// 1. Assert that every element of every cycle is in the domain:
+	    for (List<E> cycle : cycles) {
+	        for (E element : cycle) {
+	            assert PermutationUtils_Serna.findDomainFromCycles(cycles).contains(element) 
+	                : "Domain must contain element " + element;
+	        }
+	    }
+
+	    // 2. Assert that no element appears in more than one cycle:
+	    Set<E> seen = new HashSet<>();
+	    for (List<E> cycle : cycles) {
+	        for (E element : cycle) {
+	            assert seen.add(element)
+	                : "Element appears in more than one cycle: " + element;
+	        }
+	    }
+		
+		//variable set-up
+		this.domain = PermutationUtils_Serna.findDomainFromCycles(cycles);
+        this.imageMap = new HashMap<>();
+        this.preImageMap = new HashMap<>();
+        
+        //filling the image map
+        for (List<E> cycle : cycles) {
+            int size = cycle.size(); //setting size variable
+            
+            // walk through each element in the cycle
+            for (int i = 0; i < size; i++) {
+                E current = cycle.get(i);
+                E next = cycle.get((i + 1) % size); // wraps around to first element
+
+                // populate image and preimage
+                imageMap.put(current, next);
+                preImageMap.put(next, current);
+            }
+        }
+
+        //address the single cycles
+        for (E e : this.domain) {
+            if (!imageMap.containsKey(e)) {
+                imageMap.put(e, e);      // maps to itself
+                preImageMap.put(e, e);   // preimage is itself
+            }
+        }
 	}
 	
 	@Override
