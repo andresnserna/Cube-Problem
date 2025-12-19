@@ -38,8 +38,7 @@ The solver leverages mathematical concepts like permutations, cycle notation, an
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/tests_passed.png" width="250">
-  <img src="screenshots/console_output.png" width="250">
+  <img src="screenshots/tests_passed.png" width="600">
 </p>
 
 
